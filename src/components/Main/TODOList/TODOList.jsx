@@ -9,7 +9,7 @@ class TODOList extends Component {
 
     this.state = {
       toDoList: data,
-      newToDo: "" 
+      newToDo: ""
     }
   }
 
@@ -41,18 +41,25 @@ class TODOList extends Component {
 
     alert("To do Enviado!!!!!!");
     this.setState({ toDoList: [...this.state.toDoList, newToDo] });
+    this.cleanForm()
   }
 
   handleChange = (event) => this.setState({ newToDo: event.target.value })
+
+  cleanForm = () => {
+    const reset = document.getElementById("formClean")
+    const response = reset.reset()
+    return response
+  }
 
   render() {
     return <section>
 
       <article>
-        <h4>Añadir una tarea:</h4>
-        <form onSubmit={this.handleSubmit}>
+        <h4>Add a task:</h4>
+        <form id="formClean" onSubmit={this.handleSubmit}>
           <input type="text" id="name" name="name" onChange={this.handleChange} /><br />
-          <input type="submit" value="ADD" />
+          <button type="submit"> ADD </button>
         </form>
 
       </article>
@@ -60,18 +67,18 @@ class TODOList extends Component {
       <article>
         <ul>
           <li>
-            Eliminar lista de tareas:
-          <button onClick={this.removeAllToDo}>Eliminar tareas</button>
+            Click here for delete task list:<br />
+            <button onClick={this.removeAllToDo}>deleteAll</button>
           </li>
           <li>
-            Restaurar tareas diarias:
-          <button onClick={this.restoreOriginalList}>Restaurar tareas diarias</button>
+            click here for restore daily tasks:<br />
+            <button onClick={this.restoreOriginalList}>restore</button>
           </li>
         </ul>
       </article>
 
       <article>
-        <h2>Mis tareas:</h2>
+        <h2>My tasks:</h2>
         {this.printCards()}
       </article>
 
