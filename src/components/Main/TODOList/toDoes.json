@@ -1,15 +1,15 @@
 
 [
     {
-        "eventName": "Intentar hacer el ejercicio"
+        "toDo": "Ir a la compra"
     },
     {
-        "eventName": "Fracasar"
+        "toDo": "Hacer la comida"
     },
     {
-        "eventName": "Dejar el bootcamp"
+        "toDo": "Hacer la cama"
     },
     {
-        "eventName": "Asumir que no sirves para nada de una puñetera vez"
+        "toDo": "Sacar al perro."
     }
 ]

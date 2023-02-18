@@ -8,10 +8,9 @@ class TODOList extends Component {
     super(props)
 
     this.state = {
-      toDoList: data, // [] de datos iniales
-      newToDo: "" // Nombre del evento que estoy creando
+      toDoList: data,
+      newToDo: "" 
     }
-    // this.userName = React.createRef(); // Referencia para nombre usuario
   }
 
   deleteToDo = (i) => {
@@ -33,17 +32,15 @@ class TODOList extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.name.value);
 
-    const eventName = event.target.name.value;
+    const toDo = event.target.name.value;
 
-    const newEvent = {
-      eventName
+    const newToDo = {
+      toDo
     };
 
-    console.log(newEvent);
-    alert("Enviado!!!!!!");
-    this.setState({ toDoList: [...this.state.toDoList, newEvent] });
+    alert("To do Enviado!!!!!!");
+    this.setState({ toDoList: [...this.state.toDoList, newToDo] });
   }
 
   handleChange = (event) => this.setState({ newToDo: event.target.value })

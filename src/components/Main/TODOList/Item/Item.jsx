@@ -14,8 +14,8 @@ class Item extends Component {
   render() {
     return (<article>
       <h1>To do:</h1>
-      <p>{this.props.data.eventName}</p>
-      <button onClick={this.props.remove}>Delete</button>
+      <p>{this.props.data.toDo}</p>
+      <button onClick={this.props.remove}>Delete this to do</button>
       </article>
     )
   }
