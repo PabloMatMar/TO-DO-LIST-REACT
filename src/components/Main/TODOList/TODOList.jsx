@@ -54,6 +54,7 @@ class TODOList extends Component {
 
   render() {
     return <section>
+      <h1>To do list</h1>
 
       <article>
         <h4>Add a task:</h4>
