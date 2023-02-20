@@ -39,7 +39,7 @@ class TODOList extends Component {
       toDo
     };
 
-    alert("To do Enviado!!!!!!");
+    alert("To do Send!");
     this.setState({ toDoList: [...this.state.toDoList, newToDo] });
     this.cleanForm()
   }
